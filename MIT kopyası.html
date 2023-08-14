@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #192A56; /* Dark blue background color */
+    color: #FFFFFF; /* Text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+  }
+  .logo-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .logo {
+    width: 200px; /* Adjust logo size as needed */
+    height: 200px; /* Adjust logo size as needed */
+    margin-bottom: 10px;
+  }
+  .title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 24px;
+    color: white;
+  }
+  .login-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+  }
+  .input-field::placeholder {
+    color: #AEB6BF;
+  }
+  .login-button {
+    background-color: #2980B9; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  .small-logo {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 160px; /* Adjust small logo size as needed */
+    height: 100px; /* Adjust small logo size as needed */
+  }
+</style>
+</head>
+<body>
+  <img class="small-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Flag_of_the_President_of_Turkey.svg/640px-Flag_of_the_President_of_Turkey.svg.png" alt="Small Logo">
+  <div class="logo-link">
+    <img class="logo" src="https://upload.wikimedia.org/wikipedia/tr/d/d0/Milli_istihbarat_teşkilatı_logo.png" alt="Logo">
+    <div class="title">T.C. CUMHURBAŞKANLIĞI MİLLİ İSTİHBARAT TEŞKİLATI</div>
+  </div>
+<div class="login-container">
+    <form id="login-form" onsubmit="return loginUser();">
+      <input class="input-field" type="text" id="username" placeholder="Username">
+      <input class="input-field" type="password" id="password" placeholder="Password">
+      <button class="login-button" type="submit">Login</button>
+    </form>
+  </div>
+  <script>
+    function loginUser() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Replace these with your actual username and password
+      var correctUsername = "123";
+      var correctPassword = "123";
+
+      if (username === correctUsername && password === correctPassword) {
+        window.location.href = "https://www.apple.com"; // Redirect URL after successful login
+      } else {
+        alert("Invalid username or password. Please try again.");
+        return false; // Prevent form submission
+      }
+    }
+  </script>
+</body>
+</html>
